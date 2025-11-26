@@ -11,7 +11,7 @@ A sophisticated algorithmic trading system for cryptocurrency futures that uses 
 This system combines real-time market data from Binance with advanced technical analysis and machine learning to execute automated futures trades on dYdX with comprehensive monitoring and notification capabilities.
 
 ## 🏗️ Architecture
-
+```
 yobot-futures/
 ├── main.py # Core trading loop & position management
 ├── functions.py # Technical analysis & ML prediction engine
@@ -20,18 +20,16 @@ yobot-futures/
 ├── logger.py # Logging configuration
 ├── binance_connection.py # Binance market data API
 └── plots/ # Generated performance charts
-
+```
 ## ✨ Key Features
 
 ### 🤖 Trading Strategy
-- **Multi-timeframe Technical Analysis**
-- **Automated Position Management** with risk controls
-- **Real-time Market Data** from Binance API
+**Real-time Market Data** (from Binance API) --> **Multi-timeframe Technical Analysis** --> **ML** (exposure prediction) --> **Automated Position Management**
 
-### 📊 Technical Indicators
+
 ## 📊 Technical Analysis Engine
 
-The system employs a sophisticated multi-timeframe technical analysis approach with **3 distinct period configurations** for comprehensive market analysis:
+The system employs a multi-timeframe technical analysis approach with **3 distinct period configurations** for comprehensive market analysis:
 
 ### 🎯 Core Indicator Categories
 
@@ -72,14 +70,21 @@ The system employs a sophisticated multi-timeframe technical analysis approach w
   - Money flow based on price and volume
 
 ### 🧠 Machine Learning
-- **Multi-head Neural Network** for time series forecasting
+- **Multi-head Neural Network** for time series forecasting (Bidirectional LSTM)
 - **Feature Engineering** with 30+ technical indicators
-- **Real-time Prediction** updates every minute
-- **Performance Backtesting** with comprehensive analytics
+- **Real-time Prediction** updates every day
+- **Performance Backtesting** Performance logged and graphs generation stored (/file_folder/historical_data/plots/)
 
 ## 🚀 Quick Start
 
-### Setup:
+###DYDX account Setup:
+Create a new wallet compatible with DYDX (eg. Keplr, metamask). Save the seed key in a 
+file called mnemonic.txt and place this file under folder file_folder. Make sure you have some 
+USDC in the wallet you created under DYDX chain, if not (eg. in Keplr) click deposit, then type 'dydx' and copy the address 
+of your wallet in DYDX cosmos chain. Send yourself some USDC into that address, perhaps via Squid (https://app.squidrouter.com/) or other bridges if needed.
+Open https://dydx.trade and connect your wallet, if you are asked to deposit part of the USDC you have in your DYDX wallet, please do so to use them for trading.
+
+### Software Setup:
 Create a file named binance_credentials.py and write in it the following:
 ```
 BINANCE_API_KEY = "your_binance_api_key"
