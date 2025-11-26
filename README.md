@@ -24,16 +24,52 @@ yobot-futures/
 ## ✨ Key Features
 
 ### 🤖 Trading Strategy
-- **Multi-timeframe Technical Analysis** (3, 14, 28 periods)
-- **Ensemble ML Model** with pre-trained neural network
+- **Multi-timeframe Technical Analysis**
 - **Automated Position Management** with risk controls
 - **Real-time Market Data** from Binance API
 
 ### 📊 Technical Indicators
-- **Trend**: MACD, ADX, Aroon, Ichimoku
-- **Momentum**: RSI, Stochastic Oscillator  
-- **Volatility**: ATR, Bollinger Bands
-- **Volume**: Accumulation/Distribution Index
+## 📊 Technical Analysis Engine
+
+The system employs a sophisticated multi-timeframe technical analysis approach with **3 distinct period configurations** for comprehensive market analysis:
+
+### 🎯 Core Indicator Categories
+
+#### 1. Trend Indicators
+
+- **MACD (3, 14, 28 periods)** - Moving Average Convergence Divergence
+  - **Fast periods**: 3, 14, 28
+  - **Slow periods**: 14, 28, 56  
+  - **Signal periods**: 3, 3, 14
+
+- **ADX (3, 14, 28 periods)** - Average Directional Index
+  - Measures trend strength across multiple timeframes
+
+- **Aroon Indicator (3, 14, 28 periods)**
+  - Identifies trend changes and strength
+
+- **Ichimoku Cloud (3, 14, 28 periods)**
+  - Comprehensive trend, support/resistance, and momentum
+  - **Configurations**: (1,3,14), (3,14,28), (14,28,56)
+
+#### 2. Momentum Oscillators
+
+- **RSI (3, 14, 28 periods)** - Relative Strength Index
+  - Overbought/oversold conditions across short, medium, and long terms
+
+- **Stochastic Oscillator (3, 14, 28 periods)**
+  - **Smooth windows**: 1, 3, 3 periods respectively
+  - Momentum and reversal signals
+
+#### 3. Volatility Indicators
+
+- **Average True Range - ATR (3, 14, 28 periods)**
+  - Volatility measurement and position sizing
+
+#### 4. Volume Analysis
+
+- **Accumulation/Distribution Index**
+  - Money flow based on price and volume
 
 ### 🧠 Machine Learning
 - **Multi-head Neural Network** for time series forecasting
@@ -58,8 +94,7 @@ The client_secret during the first run will be used to create an authentication 
 ### Prerequisites
 
 ```bash
-
-# Extract
+ 
 pip install -r requirements.txt
 ```
 
