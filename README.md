@@ -52,6 +52,9 @@ MY_SECRET = ""
 ```
 Place the file at the root level of the repository.
 
+Then, create a client.json file from Google OAUTH 2.0 page (eg. https://console.cloud.google.com/auth/clients)
+rename the file client_secret.json and place it under the folder named file_folder
+The client_secret during the first run will be used to create an authentication token, therefore check the terminal where the scrip runs as a link to confirm the authentication for google gmail (notifications) will appear.
 ### Prerequisites
 
 ```bash
