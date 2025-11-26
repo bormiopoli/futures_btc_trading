@@ -26,10 +26,10 @@ from keras.models import load_model
 from keras_multi_head import MultiHead
 from logger import logger
 
-HYSTORICAL_DATA_ROOT = "/home/daltonik/Desktop/futures_btc_trading/file_folder/"
+HYSTORICAL_DATA_ROOT = "futures_btc_trading/file_folder/"
 plt.switch_backend('agg')
 pd.options.mode.chained_assignment = None  # default='warn'
-model = load_model('/home/daltonik/Desktop/algo_assets_variations/keras_model_BI_43200_GMaxPool2d_MH_64.h5',
+model = load_model('model/keras_model_BI_43200_GMaxPool2d_MH_64.h5',
                custom_objects={'MultiHead': MultiHead})
 
 
