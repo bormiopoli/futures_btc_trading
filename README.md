@@ -45,12 +45,17 @@ yobot-futures/
 
 ### Setup:
 Create a file named binance_credentials.py and write in it the following:
+```
 BINANCE_API_KEY = "your_binance_api_key"
 BINANCE_SECRET = "your_binance_secret"
 MY_SECRET = ""
+```
+Place the file at the root level of the repository.
+
 ### Prerequisites
 
 ```bash
 
 # Extract
 pip install -r requirements.txt
+```
