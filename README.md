@@ -59,3 +59,9 @@ Place the file at the root level of the repository.
 # Extract
 pip install -r requirements.txt
 ```
+
+### Run
+To run the software execute the file main.py on a python interpreter with dependencies installed, eg.
+```
+python main.py
+```
